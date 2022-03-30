@@ -1,0 +1,68 @@
+extends ../exclude/layout
+
+block continue_head
+  meta(property='og:description' content='')
+  meta(name='description' content='')
+  meta(name='author' content='')
+  meta(property='og:title' content='MusicSOL - Terms and conditions')
+  meta(property='og:url' content='MusicSOL.net')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  meta(property="og:image" content="https://musicsol.net/assets/img/M-logo.png")
+  title MusicSOL - Terms and conditions
+
+block below-header-container
+  .container.d-flex.h-100.align-items-center.overlay-carousel-text
+    .mx-auto.text-center
+      h1.mx-auto.my-0
+        img.logo-big(src='./assets/img/logo.svg' alt='MusicSOL logo')
+      h2.below-logo Terms and Conditions
+      p.scroll-down
+        a.animate.js-scroll-trigger(href='#tac') More
+
+      
+  include ../exclude/carousel-mini
+
+block content
+  .gradient-overlay
+  section#tac.about-section.text-white(style="padding:0 40px 0 40px;")
+
+    h1 Terms and Conditions of Use
+    h2 1. Terms
+    p
+      | By accessing this Website, accessible from https://musicsol.net, you are agreeing to be bound by these Website Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The materials contained in this Website are protected by copyright and trade mark law.
+    h2 2. Use License
+    p
+      | Permission is granted to temporarily download one copy of the materials on MusicSOL&apos;s Website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+    ul
+      li modify or copy the materials;
+      li use the materials for any commercial purpose or for any public display;
+      li attempt to reverse engineer any software contained on MusicSOL&apos;s Website;
+      li remove any copyright or other proprietary notations from the materials; or
+      li
+        | transferring the materials to another person or &quot;mirror&quot; the materials on any other server.
+    p
+      | This will let MusicSOL to terminate upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether it is printed or electronic format.
+    h2 3. Disclaimer
+    p
+      | All the materials on MusicSOL&rsquo;s Website are provided &quot;as is&quot;. MusicSOL makes no warranties, may it be expressed or implied, therefore negates all other warranties. Furthermore, MusicSOL does not make any representations concerning the accuracy or reliability of the use of the materials on its Website or otherwise relating to such materials or any sites linked to this Website.
+    h2 4. Limitations
+    p
+      | MusicSOL or its suppliers will not be hold accountable for any damages that will arise with the use or inability to use the materials on MusicSOL&rsquo;s Website, even if MusicSOL or an authorize representative of this Website has been notified, orally or written, of the possibility of such damage. Some jurisdiction does not allow limitations on implied warranties or limitations of liability for incidental damages, these limitations may not apply to you.
+    h2 5. Revisions and Errata
+    p
+      | The materials appearing on MusicSOL&rsquo;s Website may include technical, typographical, or photographic errors. MusicSOL will not promise that any of the materials in this Website are accurate, complete, or current. MusicSOL may change the materials contained on its Website at any time without notice. MusicSOL does not make any commitment to update the materials.
+    h2 6. Links
+    p
+      | MusicSOL has not reviewed all of the sites linked to its Website and is not responsible for the contents of any such linked site. The presence of any link does not imply endorsement by MusicSOL of the site. The use of any linked website is at the user&rsquo;s own risk.
+    h2 7. Site Terms of Use Modifications
+    p
+      | MusicSOL may revise these Terms of Use for its Website at any time without prior notice. By using this Website, you are agreeing to be bound by the current version of these Terms and Conditions of Use.
+    //- h2 8. Your Privacy
+    //- p Please read our Privacy Policy.
+    h2 8. Governing Law
+    p(style="margin:0;")
+      | Any claim related to MusicSOL&apos;s Website shall be governed by the laws of us without regards to its conflict of law provisions.
+
+
+block continue_scripts
+  script(src='js/scripts.js')

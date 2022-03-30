@@ -1,0 +1,145 @@
+doctype html
+head
+
+  //- VARIABLES
+  -var company = 'MusicMi'
+  -var signupURL = 'https://musicsol.teachworks.com/form/musicmi-sign-up-form'
+
+  meta(property='og:site_name' content=company)
+  meta(property='og:type' content='website')
+  meta(charset='utf-8')
+  
+  block continue_head
+
+  link(rel='icon' href='/img/favicon.png')
+  //- Font Awesome icons (free version)
+  //- script(src='https://use.fontawesome.com/releases/v5.15.1/js/all.js' crossorigin='anonymous')
+  //- Core theme CSS (includes Bootstrap)
+  link(href='/css/styles.css' rel='stylesheet')
+  link(href='/css/musicmi.css' rel='stylesheet')
+
+
+  noscript
+    img(height='1' width='1' style='display:none' src='https://www.facebook.com/tr?id=1710380889236882&ev=PageView&noscript=1')
+  // End Facebook Pixel Code
+body
+  // Navigation
+  span#page-top
+  nav#mainNav.navbar.navbar-shrink.navbar-expand-lg.navbar-light.fixed-top
+    .container-fluid
+      a.navbar-brand.js-scroll-trigger(href='#page-top')
+        img(src='/img/musicmi-logo.svg' alt='#{company} logo')
+
+      .nav-right-buttons
+        a.phone(href='tel:786-353-6146')
+          img(src='/img/call.png')
+        button#menu-btn.navbar-toggler.navbar-toggler-right(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+          | Menu
+        //- i.fas.fa-bars(style='margin-left:5px;')
+      #navbarResponsive.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item
+            a.nav-link.js-scroll-trigger(href='#about') About
+          li.nav-item
+            a.nav-link.js-scroll-trigger(href='#howitworks') How it works?
+          // <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#resources">Resources</a></li>
+          li.nav-item
+            a.nav-link.js-scroll-trigger(target='_new' href=signupURL) Sign up
+          
+          li.nav-item
+            a.nav-link.js-scroll-trigger(href='#donate') Donate
+          
+          li.nav-item
+            a.nav-link.js-scroll-trigger(href='#contact') Contact
+
+          li.nav-item.call
+            a.nav-link(href='tel:786-353-6146') 786-353-6146
+  // data-ride="carousel"
+  header#carousel.carousel.slide.masthead-nobg(data-ride='carousel')
+    block below-header-container
+  block content
+
+  block footer
+    footer.bg-black.text-white.text-center.text-lg-start(style='border-top: 1px solid var(--primary);')
+      // Grid container
+      .container.p-4
+        // Grid row
+        .row
+          // Grid column
+          .col-lg-6.col-md-12.mb-4.mb-md-0
+            h5.text-uppercase Our Mission
+            p
+              | At MusicMi we set a mission for ourselves is to provide aspiring young musicians from across the country with an opportunity to study with world-class artists and to provide our students with a music education of the highest artistic standards, regardless of your financial situation.
+          // Grid column
+          // Grid column
+          .col-lg-3.col-md-6.mb-4.mb-md-0
+            ul.list-unstyled.mb-0
+              li
+                a.nav-link.js-scroll-trigger(href='#page-top') Home
+              li
+                a.nav-link.js-scroll-trigger(href='#about') About
+              li
+                a.nav-link.js-scroll-trigger(href='#howitworks') How it works
+              li
+                a.nav-link.js-scroll-trigger(href='https://musicsol.teachworks.com/form/student-signup' target='_new') Student sign up
+
+          // Grid column
+          // Grid column
+          .col-lg-3.col-md-6.mb-4.mb-md-0
+            ul.list-unstyled
+              //- li
+                a.nav-link.js-scroll-trigger(href='https://blog.musicsol.net') Blog
+              //- li
+                a.nav-link.js-scroll-trigger(href='#') Work with us
+              li
+                a.nav-link.js-scroll-trigger(href='/terms-and-conditions') Terms and Conditions
+          // Grid column
+        // Grid row
+      // Grid container
+      // Copyright
+      .bg-white.text-black.text-center.p-3
+        | &copy; &nbsp;
+        span#copyrightyear
+        |&nbsp;Copyright MusicMi 501(c)(3)
+        script.
+          document.getElementById('copyrightyear').innerText = new Date().getFullYear()
+        
+      // Copyright
+    // Footer
+    // Google fonts
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    //- link(href='https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap' rel='stylesheet')
+  
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js')
+    // Third party plugin JS
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
+
+    block continue_scripts
+
+    block last_scripts
+      // Global site tag (gtag.js) - Google Analytics
+      script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-Y63K423RN2')
+      script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Y63K423RN2');
+
+        
+
+
+        
+
+
+      //- script(defer).
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1710380889236882');
+        fbq('track', 'PageView');
