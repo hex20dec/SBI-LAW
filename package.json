@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "concurrently \"npm run pugw\" \"npm run pugwi\" \"npm run sass\" ",
     "pug-build": "pug pug/main/ --out ./dist/ && pug pug/instruments/ --out ./dist/",
-    "pugw": "pug pug/main/ --out ./assets/ --watch",
-    "pugwi": "pug pug/instruments/ --out ./assets/instruments/ --watch",
-    "sass": "node-sass -w ./sass -o ./assets/css --output-style compressed",
+    "pugw": "pug pug/main/ --out ./public/ --watch",
+    "pugwi": "pug pug/instruments/ --out ./public/instruments/ --watch",
+    "sass": "node-sass -w ./sass -o ./public/css --output-style compressed",
     "sass-build": "node-sass ./sass -o ./dist/css --output-style compressed",
     "test-uncss": "npm run sass-build && npm run uncss",
     "//uncss": "uncss -n --ignore \"/navbar-shrink/,/expanded/,/modal.fade/\" ./dist/*.html --output ./dist/css/styles.css",
@@ -19,8 +19,10 @@
     "html-minifier": "html-minifier-terser --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true ./dist/index.html | sponge ./dist/index.html",
     "wpbuild": "webpack --config webpack.prod.js",
     "wpwatch": "webpack --watch --config webpack.dev.js",
+    "cp": "cp -r ./public/* ./dist/",
+    "clean": "rm -rf ./dist/*",
 
-    "bs": "browser-sync start -s ./assets/ --watch *.html,*.js,*.css --startPath ./assets/"
+    "bs": "browser-sync start -s ./public/ --watch *.html,*.js,*.css --startPath ./public/"
   },
   "author": "",
   "license": "ISC",

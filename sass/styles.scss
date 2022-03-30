@@ -49,11 +49,11 @@
 
 /* @ {
   font-family: logofont;
-  src: url(../assets/fonts/Montserrat-Thin.ttf);
+  src: url(../public/fonts/Montserrat-Thin.ttf);
 }
 @font-face {
   font-family: logobrace;
-  src: url(../assets/fonts/brace.ttf);
+  src: url(../public/fonts/brace.ttf);
 } */
 
 
@@ -6004,12 +6004,12 @@ a.close.disabled {
 // height: 100%;
 // object-fit: cover;
 // z-index: -1;
-// background-image: url('../assets/img/1-1080.jpg');
+// background-image: url('../public/img/1-1080.jpg');
 // min-height: 100vh;
 // max-height: 100%;
 height: var(--real100vh);
 width: 100%;
-background-image: url(../assets/img/1-1080.jpg);
+background-image: url(../public/img/1-1080.jpg);
 background-position: 70%;
 background-repeat: no-repeat;
 background-size: cover;
@@ -10349,7 +10349,7 @@ body {
   height: 100vh;
   min-height: 35rem;
   /* padding: 15rem 0; */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("../assets/img/yasminbw.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("../public/img/yasminbw.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10422,7 +10422,7 @@ body {
 .about-section {
   padding-top: 10rem;
     padding-bottom: 10rem;
-    // background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 30% , rgba(0, 0, 0, 0.7) 40%, #000000 100%), url(../assets/img/piano.jpg);
+    // background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 30% , rgba(0, 0, 0, 0.7) 40%, #000000 100%), url(../public/img/piano.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     /* background-position: left; */
@@ -10487,7 +10487,7 @@ body {
 
 .signup-section {
   padding: 10rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/bg-signup.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../public/img/bg-signup.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10971,7 +10971,7 @@ body {
   
   img{
     padding: 10px;
-    content: url(../assets/img/featuredinbw2.png);
+    content: url(../public/img/featuredinbw2.png);
     bottom: 0;
     max-height: 100px;
     margin-left: auto;
@@ -10980,9 +10980,9 @@ body {
   }
 
   // .img{
-  //   background-image: url(../assets/img/featuredinbw2.png);
+  //   background-image: url(../public/img/featuredinbw2.png);
   //   padding: 10px;
-  //   // content: url(../assets/img/featuredinbw2.png);
+  //   // content: url(../public/img/featuredinbw2.png);
   //   bottom: 0;
   //   max-height: 100px;
   //   margin-left: auto;
