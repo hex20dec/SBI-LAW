@@ -2,7 +2,8 @@ doctype html
 head
 
   //- VARIABLES
-  -var company = 'MusicMi'
+  -var company   = 'MusicMi'
+  -var domain    = company+'.org' 
   -var signupURL = 'https://musicsol.teachworks.com/form/musicmi-sign-up-form'
 
   meta(property='og:site_name' content=company)
@@ -11,12 +12,15 @@ head
   
   block continue_head
 
-  link(rel='icon' href='/img/favicon.png')
+  link(rel='apple-touch-icon' sizes='180x180' href='./img/apple-touch-icon.png')
+  link(rel='icon' type='image/png' sizes='32x32' href='./img/favicon-32x32.png')
+  link(rel='icon' type='image/png' sizes='16x16' href='./img/favicon-16x16.png')
+  link(rel='manifest' href='./site.webmanifest')
   //- Font Awesome icons (free version)
   //- script(src='https://use.fontawesome.com/releases/v5.15.1/js/all.js' crossorigin='anonymous')
   //- Core theme CSS (includes Bootstrap)
-  link(href='/css/styles.css' rel='stylesheet')
-  link(href='/css/musicmi.css' rel='stylesheet')
+  link(href='./css/styles.css' rel='stylesheet')
+  link(href='./css/musicmi.css' rel='stylesheet')
 
 
   noscript
@@ -28,11 +32,11 @@ body
   nav#mainNav.navbar.navbar-shrink.navbar-expand-lg.navbar-light.fixed-top
     .container-fluid
       a.navbar-brand.js-scroll-trigger(href='#page-top')
-        img(src='/img/musicmi-logo.svg' alt='#{company} logo')
+        img(src='./img/musicmi-logo.svg' alt=company + ' logo')
 
       .nav-right-buttons
         a.phone(href='tel:786-353-6146')
-          img(src='/img/call.png')
+          img(src='./img/call.png')
         button#menu-btn.navbar-toggler.navbar-toggler-right(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
           | Menu
         //- i.fas.fa-bars(style='margin-left:5px;')
@@ -81,7 +85,7 @@ body
               li
                 a.nav-link.js-scroll-trigger(href='#howitworks') How it works
               li
-                a.nav-link.js-scroll-trigger(href='https://musicsol.teachworks.com/form/student-signup' target='_new') Student sign up
+                a.nav-link.js-scroll-trigger(href=signupURL target='_new') Student sign up
 
           // Grid column
           // Grid column
@@ -92,7 +96,7 @@ body
               //- li
                 a.nav-link.js-scroll-trigger(href='#') Work with us
               li
-                a.nav-link.js-scroll-trigger(href='/terms-and-conditions') Terms and Conditions
+                a.nav-link.js-scroll-trigger(href='./terms-and-conditions') Terms and Conditions
           // Grid column
         // Grid row
       // Grid container

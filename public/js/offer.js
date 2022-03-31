@@ -44,7 +44,7 @@ $("#offerForm").on("submit", (e)=>{
      console.log(ajaxObj);
      $.post(postURL, ajaxObj, function(res){
         if(res === 'ok'){
-            location = 'https://musicsol.net/#thank-you';
+            location = 'https://musicmi.org/#thank-you';
         }else{
             alert('Something went wrong, please try again.');
         }

@@ -3,7 +3,7 @@ extends ../exclude/layout
 
 block continue_head
   //- VARIABLES
-  -var signupURL = 'https://musicsol.teachworks.com/form/musicmi-sign-up-form'
+  //- -var signupURL = 'https://musicsol.teachworks.com/form/musicmi-sign-up-form'
 
   meta(property='og:description' content='Free Online Music Lessons for Kids and Adults. MusicMi provides completely Free Music lessons online.')
   meta(name='description' content='Free Online Music Lessons for Kids and Adults. MusicMi provides completely Free Music lessons online.')
@@ -50,8 +50,8 @@ block content
           .text-center
             a.btn.btn-primary.btn-xlg(href=signupURL) SIGN ME UP!
           .embed-responsive.embed-responsive-16by9
-            video.embed-responsive-item(autoplay='autoplay' loop='true' muted='true' controlslist='nodownload' poster='/vids/musicmi-splash.mp4')
-              source(src='/vids/musicmi-splash.mp4' type='video/mp4')
+            video.embed-responsive-item(autoplay='autoplay' loop='true' muted='true' controlslist='nodownload' poster='./vids/musicmi-splash.mp4')
+              source(src='./vids/musicmi-splash.mp4' type='video/mp4')
     .custom-shape-divider-bottom-1647300094
       svg(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1200 120' preserveaspectratio='none')
         path.shape-fill(d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z')
@@ -64,7 +64,7 @@ block content
       .row.justify-content-center
         .col-lg-4.col-sm-10.col-12.mb-sm-5.mb-5.d-flex.align-items-stretch
           .card.text-center
-            img.card-img-top.mx-auto(src='/img/icons/lightbulb.svg')
+            img.card-img-top.mx-auto(src='./img/icons/lightbulb.svg')
             .card-body
               .card-title What is MusicMi?
               .card-text MusicMi partnered with 
@@ -72,13 +72,13 @@ block content
                 | (MusicSOL is an online Music conservatory program) in order to cater to yours specific needs.
         .col-lg-4.col-sm-10.col-12.mb-sm-5.mb-5.d-flex.align-items-stretch
           .card
-            img.card-img-top.mx-auto(src='/img/icons/group.svg')
+            img.card-img-top.mx-auto(src='./img/icons/group.svg')
             .card-body
               .card-title For whom?
               .card-text This program started with the intention to provide financial assitance to qualifying families for music education. Since its inception, we have successfully assited over 500 students. 
         .col-lg-4.col-sm-10.col-12.mb-sm-5.mb-5.d-flex.align-items-stretch
           .card
-            img.card-img-top.mx-auto(src='/img/icons/love.svg')
+            img.card-img-top.mx-auto(src='./img/icons/love.svg')
             .card-body
               .card-title Why choose MusicMi?
               .card-text MusicMi was conceptualized to provide every human being with access to a proper music education.
@@ -100,7 +100,7 @@ block content
       //- Collage of pictures of artists
       .row.justify-content-center.mt-10
         .col.text-center
-          img.collage(src='/img/collage.jpg')
+          img.collage(src='./img/collage.jpg')
 
 
       .row.justify-content-center
@@ -205,7 +205,7 @@ block content
       .row
         .col.text-center
           h2.text-white.mb-4 Contact us
-      .row
+      .row.justify-content-around
         .col-md-4.mb-3.mb-md-0
           .card.py-4.h-100
             .card-body.text-center
@@ -222,7 +222,7 @@ block content
               hr.my-4
               .small.text-black-50
                 a(href='tel:786-353-6146') ‪(786) 353-6146
-        .col-md-4.mb-3.mb-md-0
+        //- .col-md-4.mb-3.mb-md-0
           .card.py-4.h-100
             .card-body.text-center
               i.fas.fa-envelope.text-primary.mb-2
@@ -260,4 +260,4 @@ block content
 block continue_scripts
   link(href='https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Nunito:wght@200;400;700&family=Lato:wght@400;700&display=swap&text=1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.%3A%3B%2C%3F%2F()!%24%26-%2B' rel='stylesheet')
   //- link(href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' rel='stylesheet')
-  script(src='/js/scripts.js')
+  script(src='./js/scripts.js')

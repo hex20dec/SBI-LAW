@@ -22,7 +22,7 @@
     "cp": "cp -r ./public/* ./dist/",
     "clean": "rm -rf ./dist/*",
 
-    "bs": "browser-sync start -s ./public/ --watch *.html,*.js,*.css --startPath ./public/"
+    "bs": "browser-sync start -s ./public/ --watch *.html,*.js,*.css"
   },
   "author": "",
   "license": "ISC",

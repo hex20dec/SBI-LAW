@@ -9,7 +9,7 @@
 #home{
     padding-top: 12rem;
     background: rgb(255,255,255);
-    background: url('/img/icons/circles1.svg'), radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(174,238,225,1) 75%, rgba(148,191,233,1) 100%);
+    background: url('../img/icons/circles1.svg'), radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(174,238,225,1) 75%, rgba(148,191,233,1) 100%);
     // background-size: cover;
     position: relative;
     @media (max-width: 576px){
@@ -182,10 +182,10 @@
     
 
     .howitworks{
-        background: url('/img/1.jpg');
+        background: url('../img/1.jpg');
     }
     .mission{
-        background: url('/img/2.jpg');
+        background: url('../img/2.jpg');
         background-position-y: -43px;
         @media (max-width: 576px) {
             // max-height: ;
@@ -193,7 +193,7 @@
         }
     }
     .faculty{
-        background: url('/img/teacher.jpg');
+        background: url('../img/teacher.jpg');
         background-position-y: 29%;
     }
     .img{
