@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run pugw\" \"npm run pugwi\" \"npm run sass\" ",
-    "pug-build": "pug pug/main/ --out ./dist/ && pug pug/instruments/ --out ./dist/",
+    "pug-build": "pug pug/main/ --out ./dist/ && pug pug/instruments/ --out ./dist/instruments/",
     "pugw": "pug pug/main/ --out ./public/ --watch",
     "pugwi": "pug pug/instruments/ --out ./public/instruments/ --watch",
     "sass": "node-sass -w ./sass -o ./public/css --output-style compressed",
@@ -15,14 +15,14 @@
     "uncss": "uncss -n --timeout 5000 -u ./uncss.json ./dist/*.html --output ./dist/css/styles.css",
     "css": "npm run sass-build && npm run uncss",
     "build": "npm run pug-build && npm run sass-build && npm run uncss && npm run html-minifier",
-    "build-no-uncss": "npm run pug-build && npm run sass-build && npm run html-minifier",
-    "html-minifier": "html-minifier-terser --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true ./dist/index.html | sponge ./dist/index.html",
+    "build-no-uncss": "npm run cp && npm run pug-build && npm run sass-build && npm run html-minifier",
+    "html-minifier": "html-minifier-terser --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --input-dir ./public/ --output-dir ./dist/ --file-ext html",
     "wpbuild": "webpack --config webpack.prod.js",
     "wpwatch": "webpack --watch --config webpack.dev.js",
-    "cp": "cp -r ./public/* ./dist/",
+    "cp": "cp -r -u ./public/* ./dist/",
     "clean": "rm -rf ./dist/*",
-
-    "bs": "browser-sync start -s ./public/ --watch *.html,*.js,*.css"
+    "bs": "browser-sync start -s ./public/ --watch *.html,*.js,*.css",
+    "bsbuilt": "browser-sync start -s ./dist/"
   },
   "author": "",
   "license": "ISC",
@@ -33,5 +33,7 @@
     "pug": "^3.0.2",
     "pug-cli": "^1.0.0-alpha6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "uncss": "^0.17.3"
+  }
 }

@@ -50,12 +50,19 @@ block content
           .text-center
             a.btn.btn-primary.btn-xlg(href=signupURL) SIGN ME UP!
           .embed-responsive.embed-responsive-16by9
-            video.embed-responsive-item(autoplay='autoplay' loop='true' muted='true' controlslist='nodownload' poster='./vids/musicmi-splash.mp4')
+            video.embed-responsive-item(autoplay='autoplay' loop='true' muted='true' controlslist='nodownload')
               source(src='./vids/musicmi-splash.mp4' type='video/mp4')
-    .custom-shape-divider-bottom-1647300094
-      svg(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1200 120' preserveaspectratio='none')
-        path.shape-fill(d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z')
-
+    //-  Waves Container
+    div
+      svg.waves(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewbox='0 24 150 28' preserveaspectratio='none' shape-rendering='auto')
+        defs
+          path#gentle-wave(d='M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z')
+        g.parallax
+          use(xlink:href='#gentle-wave' x='48' y='0' fill='rgba(255,255,255,0.7')
+          use(xlink:href='#gentle-wave' x='48' y='3' fill='rgba(255,255,255,0.5)')
+          use(xlink:href='#gentle-wave' x='48' y='5' fill='rgba(255,255,255,0.3)')
+          use(xlink:href='#gentle-wave' x='48' y='7' fill='#fff')
+    //-  Waves end
 
 
   // About
