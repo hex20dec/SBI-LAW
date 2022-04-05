@@ -14,7 +14,7 @@
     "//uncss": "uncss -n --ignore \"/navbar-shrink/,/expanded/,/modal.fade/\" ./dist/*.html --output ./dist/css/styles.css",
     "uncss": "uncss -n --timeout 5000 -u ./uncss.json ./dist/*.html --output ./dist/css/styles.css",
     "css": "npm run sass-build && npm run uncss",
-    "build": "npm run pug-build && npm run sass-build && npm run uncss && npm run html-minifier",
+    "build": "npm run clean && npm run cp && npm run pug-build && npm run sass-build && npm run uncss && npm run html-minifier",
     "build-no-uncss": "npm run cp && npm run pug-build && npm run sass-build && npm run html-minifier",
     "html-minifier": "html-minifier-terser --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --input-dir ./public/ --output-dir ./dist/ --file-ext html",
     "wpbuild": "webpack --config webpack.prod.js",
