@@ -1,16 +1,19 @@
 extends ../exclude/layout
 
+
 block continue_head
-  meta(property='og:description' content='')
-  meta(name='description' content='')
-  meta(name='author' content='')
+  -var title = company + 'Terms and conditions'
+
+  meta(property='og:description' content=title)
+  meta(name='description' content=title)
+  //- meta(name='author' content='')
   meta(property='og:title' content=company+' - Terms and conditions')
-  meta(property='og:url' content=company+'.org')
+  meta(property='og:url' content=domain)
   meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
   meta(property="og:image" content="https://musicsol.net/public/img/M-logo.png")
-  title MusicMi - Terms and conditions
+  title=title
 
-block below-header-container
+//- block below-header-container
   .container.d-flex.h-100.align-items-center.overlay-carousel-text
     .mx-auto.text-center
       h1.mx-auto.my-0

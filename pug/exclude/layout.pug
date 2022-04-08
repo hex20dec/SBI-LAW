@@ -20,7 +20,6 @@ head
   //- script(src='https://use.fontawesome.com/releases/v5.15.1/js/all.js' crossorigin='anonymous')
   //- Core theme CSS (includes Bootstrap)
   link(href='./css/styles.css' rel='stylesheet')
-  link(href='./css/musicmi.css' rel='stylesheet')
 
 
   noscript
@@ -44,23 +43,26 @@ body
         ul.navbar-nav.ml-auto
           li.nav-item
             a.nav-link.js-scroll-trigger(href='#about') About
+       
           li.nav-item
             a.nav-link.js-scroll-trigger(href='#howitworks') How it works?
-          // <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#resources">Resources</a></li>
+       
           li.nav-item
             a.nav-link.js-scroll-trigger(target='_new' href=signupURL) Sign up
           
-          li.nav-item
-            a.nav-link.js-scroll-trigger(href='#donate') Donate
-          
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle(data-toggle='dropdown' aria-expanded='false') Want to help?
+            .dropdown-menu
+              a.dropdown-item.js-scroll-trigger(href='#donate') Donate
+              a.dropdown-item Amazon Smile 
+              a.dropdown-item Volunteer
+
           li.nav-item
             a.nav-link.js-scroll-trigger(href='#contact') Contact
 
           li.nav-item.call
             a.nav-link(href='tel:786-353-6146') 786-353-6146
-  // data-ride="carousel"
-  header#carousel.carousel.slide.masthead-nobg(data-ride='carousel')
-    block below-header-container
+
   block content
 
   block footer
@@ -115,6 +117,7 @@ body
     //- link(href='https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap' rel='stylesheet')
   
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+    
     script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js')
     // Third party plugin JS
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
