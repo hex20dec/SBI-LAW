@@ -22,15 +22,21 @@ head
   link(href='./css/styles.css' rel='stylesheet')
 
 
-  noscript
-    img(height='1' width='1' style='display:none' src='https://www.facebook.com/tr?id=1710380889236882&ev=PageView&noscript=1')
-  // End Facebook Pixel Code
+  //- noscript
+  //-   img(height='1' width='1' style='display:none' src='https://www.facebook.com/tr?id=1710380889236882&ev=PageView&noscript=1')
+  //- //- End Facebook Pixel Code
 body
-  // Navigation
-  span#page-top
+  //- Google Tag Manager (noscript)
+  noscript
+    iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-MGZX66C' height='0' width='0' style='display:none;visibility:hidden')
+  //- End Google Tag Manager (noscript)
+
+
+  //- Navigation
+  span#home
   nav#mainNav.navbar.navbar-shrink.navbar-expand-lg.navbar-light.fixed-top
     .container-fluid
-      a.navbar-brand.js-scroll-trigger(href='#page-top')
+      a.navbar-brand.js-scroll-trigger(href='/#home')
         img(src='./img/musicmi-logo.svg' alt=company + ' logo')
 
       .nav-right-buttons
@@ -42,10 +48,10 @@ body
       #navbarResponsive.collapse.navbar-collapse
         ul.navbar-nav.ml-auto
           li.nav-item
-            a.nav-link.js-scroll-trigger(href='#about') About
+            a.nav-link.js-scroll-trigger(href='/#about') About
        
           li.nav-item
-            a.nav-link.js-scroll-trigger(href='#howitworks') How it works?
+            a.nav-link.js-scroll-trigger(href='/#howitworks') How it works?
        
           li.nav-item
             a.nav-link.js-scroll-trigger(target='_new' href=signupURL) Sign up
@@ -53,9 +59,9 @@ body
           li.nav-item.dropdown
             a.nav-link.dropdown-toggle(data-toggle='dropdown' aria-expanded='false') Want to help?
             .dropdown-menu
-              a.dropdown-item.js-scroll-trigger(href='#donate') Donate
-              a.dropdown-item Amazon Smile 
-              a.dropdown-item Volunteer
+              a.dropdown-item(href='/donate') Donate
+              a.dropdown-item(href='https://smile.amazon.com/ch/87-2473893' target='_new') Amazon Smile 
+              //- a.dropdown-item Volunteer
 
           li.nav-item
             a.nav-link.js-scroll-trigger(href='#contact') Contact
@@ -114,6 +120,7 @@ body
     // Footer
     // Google fonts
     link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Nunito:wght@200;400;700&family=Lato:wght@400;700&display=swap&text=1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.%3A%3B%2C%3F%2F()!%24%26-%2B' rel='stylesheet')
     //- link(href='https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap' rel='stylesheet')
   
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
@@ -132,6 +139,14 @@ body
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-Y63K423RN2');
+        
+      //- script.
+      //-   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      //-   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      //-   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      //-   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      //-   })(window,document,'script','dataLayer','GTM-MGZX66C');
+      //-   // End Google Tag Manager
 
         
 

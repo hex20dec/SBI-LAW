@@ -3081,11 +3081,11 @@ input[type=button].btn-block {
   top: 100%;
   left: 0;
   z-index: 1000;
-  display: none;
+  // display: none;
   float: left;
-  min-width: 10rem;
-  padding: 0.5rem 0;
-  margin: 0.125rem 0 0;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
   font-size: 1rem;
   color: #212529;
   text-align: left;
@@ -3094,6 +3094,12 @@ input[type=button].btn-block {
   background-clip: padding-box;
   /* border: 1px solid rgba(0, 0, 0, 0.15); */
   border-radius: 0.25rem;
+  transition: all 200ms;
+  max-height: 0px;
+  overflow:hidden;
+  // visibility: none;
+  // opacity: 0;
+  
 }
 
 .dropdown-menu-left {
@@ -3249,6 +3255,8 @@ input[type=button].btn-block {
   white-space: nowrap;
   background-color: transparent;
   border: 0;
+  text-transform: uppercase;
+  font-size: 0.9em;
 }
 .dropdown-item:hover, .dropdown-item:focus {
   color: #16181b;
@@ -3267,7 +3275,12 @@ input[type=button].btn-block {
 }
 
 .dropdown-menu.show {
-  display: block;
+  // display: block;
+  max-height:1000px;
+  overflow:auto;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
 }
 
 .dropdown-header {
@@ -3990,6 +4003,10 @@ input[type=button].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  cursor: pointer;
 }
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
@@ -10288,6 +10305,10 @@ body {
     transition: none;
     padding: 2rem 1.5rem;
     color: rgba(255, 255, 255, 0.5);
+
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
   }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
