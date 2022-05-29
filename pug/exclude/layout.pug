@@ -6,6 +6,8 @@ head
   -var domain    = company+'.org' 
   -var signupURL = 'https://musicsol.teachworks.com/form/musicmi-sign-up-form'
 
+  include urls
+
   meta(property='og:site_name' content=company)
   meta(property='og:type' content='website')
   meta(charset='utf-8')
@@ -37,7 +39,7 @@ body
   span#home
   nav#mainNav.navbar.navbar-shrink.navbar-expand-lg.navbar-light.fixed-top
     .container-fluid
-      a.navbar-brand.js-scroll-trigger(href='/#home')
+      a.navbar-brand.js-scroll-trigger(href=urls.home)
         img(src='./img/musicmi-logo.svg' alt=company + ' logo')
 
       .nav-right-buttons
@@ -49,23 +51,23 @@ body
       #navbarResponsive.collapse.navbar-collapse
         ul.navbar-nav.ml-auto
           li.nav-item
-            a.nav-link.js-scroll-trigger(href='/#about') About
+            a.nav-link.js-scroll-trigger(href=urls.about) About
        
           li.nav-item
-            a.nav-link.js-scroll-trigger(href='/#howitworks') How it works?
+            a.nav-link.js-scroll-trigger(href=urls.howItWorks) How it works?
        
           li.nav-item
-            a.nav-link.js-scroll-trigger(target='_new' href=signupURL) Sign up
+            a.nav-link.js-scroll-trigger(href=urls.faq) FAQ
           
           li.nav-item.dropdown
             a.nav-link.dropdown-toggle(data-toggle='dropdown' aria-expanded='false') Want to help?
             .dropdown-menu
-              a.dropdown-item(href='/donate') Donate
-              a.dropdown-item(href='https://smile.amazon.com/ch/87-2473893' target='_new') Amazon Smile 
+              a.dropdown-item(href=urls.donate) Donate
+              a.dropdown-item(href=urls.amazonSmile target='_new') Amazon Smile 
               //- a.dropdown-item Volunteer
 
           li.nav-item
-            a.nav-link.js-scroll-trigger(href='#contact') Contact
+            a.nav-link.js-scroll-trigger(href=urls.contact) Contact
 
           li.nav-item.call
             a.nav-link(href='tel:786-353-6146') 786-353-6146
@@ -88,13 +90,15 @@ body
           .col-lg-3.col-md-6.mb-4.mb-md-0
             ul.list-unstyled.mb-0
               li
-                a.nav-link.js-scroll-trigger(href='#page-top') Home
+                a.nav-link.js-scroll-trigger(href=urls.home) Home
               li
-                a.nav-link.js-scroll-trigger(href='#about') About
+                a.nav-link.js-scroll-trigger(href=urls.about) About
               li
-                a.nav-link.js-scroll-trigger(href='#howitworks') How it works
+                a.nav-link.js-scroll-trigger(href=urls.faq) FAQ
               li
-                a.nav-link.js-scroll-trigger(href=signupURL target='_new') Student sign up
+                a.nav-link.js-scroll-trigger(href=urls.howItWorks) How it works
+              li
+                a.nav-link.js-scroll-trigger(href=urls.signup target='_new') Student sign up
 
           // Grid column
           // Grid column
@@ -105,7 +109,7 @@ body
               //- li
                 a.nav-link.js-scroll-trigger(href='#') Work with us
               li
-                a.nav-link.js-scroll-trigger(href='./terms-and-conditions') Terms and Conditions
+                a.nav-link.js-scroll-trigger(href=urls.terms) Terms and Conditions
           // Grid column
         // Grid row
       // Grid container

@@ -17,13 +17,13 @@
     "build":  "npm run clean && npm run cp && npm run pug-build && npm run sass-build && npm run uncss && npm run html-minifier",
     "build2": "npm run clean && npm run cp && npm run pug-build && npm run sass-build && npm run html-minifier",
     "build-no-uncss": "npm run cp && npm run pug-build && npm run sass-build && npm run html-minifier",
-    "html-minifier": "html-minifier-terser --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --input-dir ./public/ --output-dir ./dist/ --file-ext html",
+    "html-minifier": "html-minifier-terser --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --input-dir ./dist/ --output-dir ./dist/ --file-ext html",
     "wpbuild": "webpack --config webpack.prod.js",
     "wpwatch": "webpack --watch --config webpack.dev.js",
     "cp": "cp -r -u ./public/* ./dist/",
     "clean": "rm -rf ./dist/*",
-    "bs": "browser-sync start -s ./public/ --watch *.html,*.js,*.css",
-    "bsbuilt": "browser-sync start -s ./dist/"
+    "bs": "browser-sync start -s ./public/ --watch *.html,*.js,*.css --extensions html",
+    "bsbuilt": "browser-sync start -s ./dist/ --extensions html"
   },
   "author": "",
   "license": "ISC",
