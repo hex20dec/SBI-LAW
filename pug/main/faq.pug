@@ -107,14 +107,14 @@ block content
           h2 (Frequently Asked Questions)
       .row.d-flex.justify-content-around.mt-5
         .col-md-10
-          #accordionExample.accordion
+          #accordion.accordion
             each line, idx in faq
               .card
-                #headingOne.card-header
+                .card-header(id=`heading-${idx}`)
                   h5
                     button.btn.btn-link.btn-block.text-left(type='button' data-toggle='collapse' data-target=`#q${idx}` aria-expanded='false' aria-controls=`#q${idx}`)
                       | #{line.q}
-                .collapse(id=`q${idx}` aria-labelledby='headingOne' data-parent='#accordionExample')
+                .collapse(id=`q${idx}` aria-labelledby=`heading-${idx}` data-parent='#accordion')
                   .card-body!=line.a
 
   //- section#content

@@ -1,0 +1,18 @@
+.card {
+  background-color: initial;
+  border: none;
+  /*border-radius: 1.25rem;*/ }
+
+.card-header {
+  border-bottom: initial;
+  box-shadow: 1px 1px 5px 1px lightgrey; }
+
+button:hover, button:active, button:focus {
+  text-decoration: none !important; }
+
+details summary {
+  font-size: 1.5rem;
+  text-align: center; }
+  details summary span {
+    display: block;
+    font-size: 0.7rem; }

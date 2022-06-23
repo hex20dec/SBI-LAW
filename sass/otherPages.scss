@@ -9,6 +9,7 @@
 
 body > section:first-of-type {
   padding-top:100px !important;
+  // text-transform: uppercase;
   // border-top: 100px solid red;
 
 //   height: 70vh;
@@ -30,6 +31,7 @@ body > section:first-of-type {
     -webkit-text-fill-color: transparent;
     font-size: 4em;
     font-weight: bold;
+    text-transform: uppercase;
   }
 }
 .custom-shape-divider-top-1649573857 {
@@ -57,3 +59,4 @@ body > section:first-of-type {
   // padding-top:30vw;
   padding-bottom: 6rem;
 }
+

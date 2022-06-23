@@ -1,0 +1,68 @@
+extends ../exclude/layout
+
+
+block continue_head
+	-var pageTitle = 'Roadmap'
+	-var title = `${pageTitle} - ${company}`
+
+	meta(property='og:description' content=title)
+	meta(name='description' content=title)
+	meta(name='author' content='')
+	meta(property='og:title' content=`${company} - ${pageTitle}`)
+	meta(property='og:url' content=domain)
+	meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+	//- meta(property='og:image' content=`https://${domain}/public/img/M-logo.png`)
+	title=title
+
+
+	
+block content
+			
+	include ../exclude/svgBg.pug
+
+	section#first.d-flex.align-items-center
+		.container-fluid
+			.row.d-flex.justify-content-around.text-center
+				.col-md-6
+					h1=pageTitle
+				//-   h2 (Frequently Asked Questions)
+			.row.d-flex.justify-content-around.mt-5
+				.col-md-10
+					.container
+						ul.timeline
+							li.timeline
+								span.icon.done.material-symbols-outlined check_circle
+								details.panel(open)
+									summary How it all began
+										span (2021)
+									p
+										
+										|	Driven by the global pandemics awareness that is ongoing since 2019, the world saw an increase in remote learning / working. In the education field, we saw an increased need for remote learning and critical thinking skills to solve many challenges. In 2021 ... 
+										a(href=urls.howItAllBegan ) Read more
+							li.timeline
+								span.icon.done.material-symbols-outlined check_circle
+								details.panel(open)
+									summary Sharing our mission
+										span (2021 - Ongoing)
+									p
+										| As any non-profit, spreading the word out and sharing our mission has not been an easy task. We are constantly on a mission to seek out more families in need for our support. 
+										a(href=urls.donate) Donations are always welcome as we strive to continue on our mission to grow.
+							li.timeline
+								span.icon.working.material-symbols-outlined schedule
+								details.panel(open)
+									summary OLÉ
+										span (2022 - Ongoing)
+									p
+										| OLÉ (Optimized Learning Experience) is our current big focus. OLÉ is a new platform we are developing that would analyze the student's learning behaviors through recorded video chat sessions and deliver data points that would dramatically enhance the student's learning capabiliteis.
+										a( href=urls.ole ) Read more
+							li.timeline
+								span.icon.material-symbols-outlined pending 
+								details.panel(open)
+									summary Going Global
+									p
+										| Providing more resources to the rest the world has been on our mind since day one, but first we had to narrow our focus in order to grow properly and to eventally be able to hit that target.
+
+block continue_scripts
+	link(href='/css/modules/timeline.css' rel='stylesheet')
+	link(href='/css/pages/roadmap.css' rel='stylesheet')
+	script(src='js/scripts.js')

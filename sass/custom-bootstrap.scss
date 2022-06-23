@@ -3094,11 +3094,13 @@ input[type=button].btn-block {
   background-clip: padding-box;
   /* border: 1px solid rgba(0, 0, 0, 0.15); */
   border-radius: 0.25rem;
-  transition: all 200ms;
+  transition: all 100ms;
   max-height: 0px;
   overflow:hidden;
+  min-width: 10rem;
   // visibility: none;
   // opacity: 0;
+  
   
 }
 
@@ -3255,7 +3257,7 @@ input[type=button].btn-block {
   white-space: nowrap;
   background-color: transparent;
   border: 0;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   font-size: 0.9em;
 }
 .dropdown-item:hover, .dropdown-item:focus {
@@ -3281,6 +3283,7 @@ input[type=button].btn-block {
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
+  box-shadow: 0px 5px 10px 0px #90a1af;
 }
 
 .dropdown-header {
