@@ -4,246 +4,164 @@ extends ../exclude/layout
 block continue_head
   //- VARIABLES
   //- -var signupURL = 'https://musicsol.teachworks.com/form/musicmi-sign-up-form'
+  -var desc = `WE ARE NOT JUST ANOTHER IMMIGRATION LAW FIRM, WE ARE YOUR FRIEND! We pride ourselves at being the best at what we do because we truly care about you, and your unique circumstance. You are not just another case for us, you are a FRIEND who needs our help, and we will do, what a good friend does,`
 
-  meta(property='og:description' content='Free Online Music Lessons for Kids and Adults. MusicMi provides completely Free Music lessons online.')
-  meta(name='description' content='Free Online Music Lessons for Kids and Adults. MusicMi provides completely Free Music lessons online.')
+  meta(property='og:description' content=desc)
+  meta(itemprop='description' content=desc)
+  meta(name='description' content=desc)
   //- meta(name='author' content='')
-  meta(property='og:title' content='Free One-on-One Online Music Lessons for Kids and Adults | MusicMi')
-  meta(property='og:url' content='musicmi.org')
+  meta(property='og:title' content='SBI LAW PLLC')
+  meta(property='og:url' content='https://www.sbilaw.co/')
   meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
   //- meta(property="og:image" content="https://musicsol.net/public/img/musicmi-logo.svg")
-  title Free Online Music Lessons for Kids and Adults | MusicMi
-  
+  title SBI LAW PLLC
 
-//- block below-header-container
-  //- .container.overlay-carousel-text#index-header-text
-    //- .mx-auto.text-center.lato
-    h1 Online Music Lessons for Kids and Adults
-  //- .container.d-flex.h-100.align-items-center.overlay-carousel-text
-    .mx-auto.text-center
-      h1.mx-auto.my-0
-        img.logo-big(src='./public/img/logo.svg' alt='MusicSOL logo')
-      h2.text-white-50.mx-auto.mt-2.mb-5.text-under-logo
-        | Music Lessons for everyone!
-      a.btn.btn-primary.js-scroll-trigger(target='_new' href='https://musicsol.teachworks.com/form/student-signup') Sign me up!
-
-
-
-  include ../exclude/carousel-mini
-    block inside-carousel
-      #index-header-text
-        h1 MusicMi
     
 
 block content
-  section#home.d-flex.align-items-top
-    .container
-      .row.d-flex.justify-content-around.text-center
-        .col-lg-9.col-md-12.col-sm-12
-          h2.text-uppercase Free One-on-One Music Lessons
-          h5
-            span.comletely-free ( Yes, completely free! )
-          
-          .subheading-description
-            .first Any  instrument, Anytime, Anywhere!
-            div Every lesson is customized to the student and works with your schedule.
-          .text-center
-            a.btn.btn-primary.btn-xlg(href=signupURL) SIGN ME UP!
-          .embed-responsive.embed-responsive-16by9
-            video.embed-responsive-item(autoplay='autoplay' loop='true' muted='true' controlslist='nodownload')
-              source(src='./vids/musicmi-splash.mp4' type='video/mp4')
-    //-  Waves Container
-    div
-      svg.waves(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewbox='0 24 150 28' preserveaspectratio='none' shape-rendering='auto')
-        defs
-          path#gentle-wave(d='M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z')
-        g.parallax
-          use(xlink:href='#gentle-wave' x='48' y='0' fill='rgba(255,255,255,0.7')
-          use(xlink:href='#gentle-wave' x='48' y='3' fill='rgba(255,255,255,0.5)')
-          use(xlink:href='#gentle-wave' x='48' y='5' fill='rgba(255,255,255,0.3)')
-          use(xlink:href='#gentle-wave' x='48' y='7' fill='#fff')
-    //-  Waves end
+  section#home
+    .container-fluid.h-100.d-flex.align-items-center.justify-content-center
+      .row
+        .col-lg-12.text-center(style='padding:0;')
+          #header
+            h1
+              img#logo(src='./img/sbilaw-logo2.svg', alt='SBI LAW logo')
+            h2.mt-3 Immigration, Business, Pro Bono
+    .gradient-overlay
+    #vid-container
+      video(autoplay muted loop playsinline preload='metadata')
+        source(src='https://telegra.ph/file/6cf90f27567851f059300.mp4' type='video/mp4')
+        //- source(src='./assets/vids/bwguitar.webm' type='video/webm')
+        //- source(src='./assets/vids/bwguitar.ogv' type='video/ogg')
+        |   Your browser does not support HTML5 video.
+    .custom-shape-divider-bottom-1656694651
+      svg(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1200 120' preserveaspectratio='none')
+        path.shape-fill(d='M1200 120L0 16.48 0 0 1200 0 1200 120z')
 
+    //- .custom-shape-divider-bottom-1656685633
+      svg(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1200 120' preserveaspectratio='none')
+        path.shape-fill(d='M1200 0L0 0 598.97 114.72 1200 0z')
 
   // About
-  section#about.about-section.text-center
+  section#about.about-section
     .container
       .row.justify-content-center
-        .col-lg-4.col-sm-10.col-12.mb-sm-5.mb-5.d-flex.align-items-stretch
-          .card.text-center
-            img.card-img-top.mx-auto(src='./img/icons/lightbulb.svg')
-            .card-body
-              .card-title What is MusicMi?
-              .card-text MusicMi partnered with 
-                a(href='https://musicsol.net/') MusicSOL 
-                | (MusicSOL is an online Music conservatory program) in order to cater to yours specific needs.
-        .col-lg-4.col-sm-10.col-12.mb-sm-5.mb-5.d-flex.align-items-stretch
-          .card
-            img.card-img-top.mx-auto(src='./img/icons/group.svg')
-            .card-body
-              .card-title For whom?
-              .card-text This program started with the intention to provide financial assistance to qualifying families for music education. Since its inception, we have successfully assisted over 500 students. 
-        .col-lg-4.col-sm-10.col-12.mb-sm-5.mb-5.d-flex.align-items-stretch
-          .card
-            img.card-img-top.mx-auto(src='./img/icons/love.svg')
-            .card-body
-              .card-title Why choose MusicMi?
-              .card-text MusicMi was conceptualized to provide every human being with access to a proper music education.
-  
-  section#students.bg-light
-    .container 
-      .row.justify-content-center
-        .col-lg-9.col-10.text-center
-          .title-huge Join 500+ Students
-          .text-below-title At MusicMi we believe that you deserve to receive the best music education possible without needing to take any loans.
-            a(href='https://musicsol.net/')  In 2021, we founded MusicSOL, and ever since, it has been a pleasure to provide students with the utmost seamless experience in learning music online.
-            |  Due to the accumulative fees that incur with taking private music lessons, we have realized there is a true need to provide some assistance to families in need.
-            .mt-3 Click the button below to get started.
-      .row.justify-content-center.mt-10
-        .col.text-center
-          a.btn.btn-primary.btn-xlg(href=signupURL) SIGN ME UP!
+        .col-lg-12.col-sm-10.col-12.mb-5
+          .content-box.mt-5.p-5
+            .custom-shape-divider-bottom-1656694651-above
+              svg(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1200 120' preserveaspectratio='none')
+                path.shape-fill(d='M1200 120L0 16.48 0 0 1200 0 1200 120z')          
+            h3.b.pb-4 WE ARE NOT JUST ANOTHER IMMIGRATION LAW FIRM, WE ARE YOUR FRIEND! 
+        
+            p.mb-5 We pride ourselves at being the best at what we do because we truly care about you, and your unique circumstance. You are not just another case for us, you are a FRIEND who needs our help, and we will do, what a good friend does, everything in our power to help you.
+
+            p.b Are we the right friend you are looking for? 
+              span(style='font-weight:initial;') Well, we can be your friend no matter what : ) 
+            
+            p But we mostly help FRIENDS with immigration matters such as: 
+            ul
+              li Family Based 
+              li Business 
+              li Visa (All Kinds)
+              li DACA
+              li Citizenship
+              li Asylum
+              li Removal
+
+            p If your question is not on the above list, feel free to still ask your question here
+
+    .custom-shape-divider-bottom-1656694651
+      svg(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1200 120' preserveaspectratio='none')
+        path.shape-fill(d='M1200 120L0 16.48 0 0 1200 0 1200 120z')
 
 
-      //- Collage of pictures of artists
-      .row.justify-content-center.mt-10
-        .col.text-center
-          img.collage(src='./img/collage.jpg')
 
-
-      .row.justify-content-center
-        .col-lg-9.col-10.text-center
-          .title-big FREE SIGNUP & LESSONS
-          .text-below-title MusicMi is free for students 4-18. 
-            br 
-            | We offer classes for every instrument plus Music Theory. 
-            br
-            | Sign up now and get matched with a qualified instructor today.
-      .row.justify-content-center.mt-10
-        .col.text-center
-          a.btn.btn-primary.btn-xlg(href=signupURL) FREE SIGN UP!
-      
-
-      
+       
+  section#friend
+    .container.mt-5.mb-5
+      .row.justify-content-lg-center.justify-content-sm-start.justify-content-center
+        .col-lg-6.col-sm-7.col-10.mb-5
+          p.mb-2
+            h2.b FRIEND -
+            blockquote “Friendship is a word of broad and varied application. It is commonly used to describe the undefinable relationships which exist not only between those connected by ties of kinship or marriage, but as well between strangers in blood, and which vary in degree from the greatest intimacy to an acquaintance more or less casual”.
+            cite [Clark v. Campbell, 82 N.H. 281, 286 (N.H. 1926)]
+        .col-lg-6.col-sm-5.col-10.offset-sm-7.offset-lg-0.offset-0
+            h2.b F
+              small oreign national
+            h2.b R
+              small oreign national
+            h2.b I
+              small mmigration
+            h2.b E
+              small xpert's assistances
+            h2.b N
+              small avigating
+            h2.b D
+              small OS, DHS, and USCIS
+              
+        
           
-  //- howitworks
-  section#howitworks.projects-section.bg-light
-    .custom-shape-divider-bottom-1
-      svg(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1200 120' preserveaspectratio='none')
-        path.shape-fill(d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25')
-    
-    .custom-shape-divider-bottom-2
-      svg(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1200 120' preserveaspectratio='none')
-        path.shape-fill(d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' opacity='.5')
 
-    .custom-shape-divider-bottom-3
-      svg(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1200 120' preserveaspectratio='none')
-        path.shape-fill(d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z')
         
 
-    .container
-      .row.justify-content-center.no-gutters.mb-4.mb-lg-5
-        .col-lg-6
-          .vhcenter.img.howitworks
-        .col-lg-6
-          .bg-black.h-100.project
-            .d-flex.h-100
-              .margin-all-3.project-text.w-100.my-auto.text-lg-left.text-white
-
-                h2 HOW IT WORKS?
-                ol
-                  li
-                    a(href=signupURL) Sign up by filling up a simple form
-                    br
-                    br
-                  li  We will get back to you within 2-7 business days
-                    br
-                    br
-                  li Once approved, a teacher will get in touch with you to schedule lessons on your preferred date and time.
-
-                hr.d-none.d-lg-block.mb-0.mr-0
-      //- Our mission
-      .row.justify-content-center.no-gutters.mb-4.mb-lg-5
-        .col-xl-7.col-lg-7
-          .vhcenter.img.mission
-        .col-xl-5.col-lg-5.order-lg-first
-          .featured-text.text-lg-left
-            h2 OUR MISSION
-            p.text-black-50.mb-0=texts.mission
-      //- Faculty
-      .row.justify-content-center.no-gutters.mb-4.mb-lg-5
-        .col-lg-4
-          .vhcenter.img.faculty
-        .col-lg-8
-          .bg-black.h-100.project
-            .d-flex.h-100
-              .margin-all-3.project-text.w-100.my-auto.text-lg-left.text-white
-                div.right-border-color
-                  h2 THE PROGRAM
-                  p.mb-0
-                    | We have Partnered with MusicSOL to provide the best possible music program available online. Through this program you will receive:
-                    ul
-                      li Private One-on-One music lessons
-                      li Group music theory classes
-                      li Seasonal recitals
-                      li Interactive community of young musicians
-                      li Certificate program 
-                      li 
-                        a(hre='https://musicsol.net') To learn more click here
-  // Student sign up SECTION
-  section#donate.contact-section.bg-black
-    .container
-      
-      .row.justify-content-center 
-                      
-        .col-lg-5.text-center.mb-3
-          .card
-            .card-body
-              h5.card-title Every Donation Gives Someone A Chance To Learn Music!
-              h6.card-subtitle.mb-2.text-muted 
-              script(src='https://donorbox.org/widget.js' paypalexpress='false')
-              iframe(src='https://donorbox.org/embed/let-s-give-anyone-a-chance-to-learn-music?default_interval=m&amount=30&show_content=true' name='donorbox' allowpaymentrequest='allowpaymentrequest' seamless='seamless' frameborder='0' scrolling='no' height='900px' width='100%' style='max-width: 100%; min-width: 100%; max-height:none!important')
 
 
-
-  hr(style='margin: 0; background-color: var(--primary);')
+  //- hr(style='margin: 0; background-color: var(--primary);')
   section#contact.contact-section.bg-black
-    .container
+    .container-fluid
       .row
         .col.text-center
-          h2.text-white.mb-4 Contact us
-      .row.justify-content-around
-        .col-md-4.mb-3.mb-md-0
-          .card.py-4.h-100
-            .card-body.text-center
-              i.fas.fa-envelope.text-primary.mb-2
-              h4.text-uppercase.m-0 Email
-              hr.my-4
-              .small.text-black-50
-                a(href='mailto:info@musicmi.org') info@musicmi.org
-        .col-md-4.mb-3.mb-md-0
-          .card.py-4.h-100
-            .card-body.text-center
-              i.fas.fa-envelope.text-primary.mb-2
-              h4.text-uppercase.m-0 Phone
-              hr.my-4
-              .small.text-black-50
-                a(href='tel:786-353-6146') ‪(786) 353-6146
-        //- .col-md-4.mb-3.mb-md-0
-          .card.py-4.h-100
-            .card-body.text-center
-              i.fas.fa-envelope.text-primary.mb-2
-              h4.text-uppercase.m-0 Address
-              hr.my-4
-              .small.text-black-50
-                span 11140 N Kendall Dr, Miami, FL 33176
-      
-  
-  //- #success-msg.container.fixed-top.text-center
-  //-   .row
-  //-     .col
-  //-       .alert.alert-success(role='alert')
-  //-         | Thank you! We will get back to you as soon as possible! :)
+          h2.text-white.mb-5 CONTACT
 
+      .row.justify-content-around
+        .col-lg-5.col-md-6.mb-3.mb-md-0
+          iframe(sandbox='allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-modals' frameborder='0' aria-label='Map' src='https://maps-api-ssl.google.com/maps?hl=en-US&ll=25.905382,-80.142275&output=embed&z=11' allowfullscreen='')
+                  
+
+        .col-lg-5.col-md-6.mb-3.mb-md-0
+          .card.py-4.h-100
+            .card-body
+              .row.p-2
+                .col-5
+                  h4 Phone: 
+                .col-7
+                  h4
+                    small
+                      a(href=`tel:${texts.tel}`)=texts.tel
+              .row.p-2
+                .col-5
+                  h4 Email: 
+                .col-7
+                  h4
+                    small
+                      a(href='mailto:info@sbilaw.co') info@sbilaw.co
+              .row.p-2
+                .col-5
+                  h4 Telegram: 
+                .col-7
+                  h4
+                    small
+                      s
+                        a(href='tg://resolve?domain=immigrationlawusa') @immigrationlawusa
+              .row.p-2
+                .col-5
+                  h4 Instagram: 
+                .col-7
+                  h4
+                    small
+                      a(href='https://instagram.com/immigrationlawusa') @immigrationlawusa
+    .custom-shape-divider-top-1656706087
+      svg(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1200 120' preserveaspectratio='none')
+        path.shape-fill(d='M649.97 0L599.91 54.12 550.03 0 0 0 0 120 1200 120 1200 0 649.97 0z')
+
+
+
+
+
+
+
+
+        
 
   #ty-modal.modal(tabindex='-1')
     .modal-dialog

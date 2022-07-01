@@ -1,0 +1,51 @@
+extends ../exclude/layout
+
+
+block continue_head
+	-var pageTitle = 'Resources'
+	-var title = `${pageTitle} - ${company}`
+
+	meta(property='og:description' content=title)
+	meta(name='description' content=title)
+	meta(name='author' content='')
+	meta(property='og:title' content=`${company} - ${pageTitle}`)
+	meta(property='og:url' content=domain)
+	meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+	//- meta(property='og:image' content=`https://${domain}/public/img/M-logo.png`)
+	title=title
+
+
+	
+block content
+
+	section#first.d-flex.align-items-center
+		.container-fluid.mt-10
+			.row.d-flex.justify-content-around.text-center
+				.col-md-12
+					h1.p-2.text-uppercase.title-huge=pageTitle
+
+	section.mt-5
+		.container
+			.row 
+				.col-12
+					ul#list-of-resources
+						li.h5 KNOW YOUR RIGHTS CARD - 
+							a.u(href='/dl/know your rights Card.pdf') Download here, print and make sure to always carry in your wallet
+
+			
+block continue_scripts
+	script(src='js/scripts.js')
+	style.
+		#first{
+			background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.40) 100%), url('../img/resources.jpg');			
+			background-size: cover;
+			background-repeat: no-repeat;
+			color: #333;
+			background-position: 60%;
+			border-bottom: 2px solid var(--primary);
+			min-height: 50vh;
+		}
+		#list-of-resources{
+			min-height: 35vh;
+		}
+
