@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run pugw\" \"npm run pugwi\" \"npm run sass\" ",
-    "pug-build": "pug pug/main/ --out ./dist/ && pug pug/instruments/ --out ./dist/instruments/",
+    "pug-build": "pug pug/main/ --out ./dist/",
     "pugw": "pug pug/main/ --out ./public/ --watch",
     "pugwi": "pug pug/instruments/ --out ./public/instruments/ --watch",
     "sass": "node-sass -w ./sass/ -o ./public/css",

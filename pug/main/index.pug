@@ -3,7 +3,6 @@ extends ../exclude/layout
 
 block continue_head
   //- VARIABLES
-  //- -var signupURL = 'https://musicsol.teachworks.com/form/musicmi-sign-up-form'
   -var desc = `WE ARE NOT JUST ANOTHER IMMIGRATION LAW FIRM, WE ARE YOUR FRIEND! We pride ourselves at being the best at what we do because we truly care about you, and your unique circumstance. You are not just another case for us, you are a FRIEND who needs our help, and we will do, what a good friend does,`
 
   meta(property='og:description' content=desc)
@@ -13,7 +12,7 @@ block continue_head
   meta(property='og:title' content='SBI LAW PLLC')
   meta(property='og:url' content='https://www.sbilaw.co/')
   meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-  //- meta(property="og:image" content="https://musicsol.net/public/img/musicmi-logo.svg")
+
   title SBI LAW PLLC
 
     
@@ -26,7 +25,8 @@ block content
           #header
             h1
               img#logo(src='./img/sbilaw-logo2.svg', alt='SBI LAW logo')
-            h2.mt-3 Immigration, Business, Pro Bono
+            //- h2.mt-3 Immigration & Intellectual property
+            h2.mt-3 Immigration & Intellectual property
     .gradient-overlay
     #vid-container
       video(autoplay muted loop playsinline preload='metadata')
@@ -78,14 +78,14 @@ block content
 
        
   section#friend
-    .container.mt-5.mb-5
-      .row.justify-content-lg-center.justify-content-sm-start.justify-content-center
-        .col-lg-6.col-sm-7.col-10.mb-5
+    .container-fluid.mt-5.mb-5
+      .row.justify-content-lg-around.justify-content-sm-start.justify-content-center
+        .col-lg-4.col-sm-7.col-10.mb-5
           p.mb-2
             h2.b FRIEND -
             blockquote “Friendship is a word of broad and varied application. It is commonly used to describe the undefinable relationships which exist not only between those connected by ties of kinship or marriage, but as well between strangers in blood, and which vary in degree from the greatest intimacy to an acquaintance more or less casual”.
             cite [Clark v. Campbell, 82 N.H. 281, 286 (N.H. 1926)]
-        .col-lg-6.col-sm-5.col-10.offset-sm-7.offset-lg-0.offset-0
+        .col-lg-4.col-sm-5.col-10.offset-sm-7.offset-lg-0.offset-0
             h2.b F
               small oreign national
             h2.b R
@@ -115,7 +115,9 @@ block content
 
       .row.justify-content-around
         .col-lg-5.col-md-6.mb-3.mb-md-0
-          iframe(sandbox='allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-modals' frameborder='0' aria-label='Map' src='https://maps-api-ssl.google.com/maps?hl=en-US&ll=25.905382,-80.142275&output=embed&z=11' allowfullscreen='')
+          .card.h-100
+            .card-body.p-0
+              iframe(sandbox='allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-modals' frameborder='0' aria-label='Map' src='https://maps-api-ssl.google.com/maps?hl=en-US&ll=25.905382,-80.142275&output=embed&z=11' allowfullscreen='')
                   
 
         .col-lg-5.col-md-6.mb-3.mb-md-0
@@ -141,8 +143,7 @@ block content
                 .col-7
                   h4
                     small
-                      s
-                        a(href='tg://resolve?domain=immigrationlawusa') @immigrationlawusa
+                        a(href='tg://resolve?domain=Sbilawfirm') @Sbilawfirm
               .row.p-2
                 .col-5
                   h4 Instagram: 
@@ -158,10 +159,6 @@ block content
 
 
 
-
-
-
-        
 
   #ty-modal.modal(tabindex='-1')
     .modal-dialog
@@ -182,5 +179,4 @@ block content
 
   //- Footer
 block continue_scripts
-  //- link(href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' rel='stylesheet')
   script(src='./js/scripts.js')
