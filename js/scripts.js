@@ -7,20 +7,7 @@
     "use strict"; // Start of use strict
 
 
-    if(location.hash.includes('#thank-you')){
-        $("#ty-modal").modal();
-        if(location.hash.includes('instructor')){
-            // instructor sign up
-            $("#instructor-signup-ty-body").attr("hidden", false);
-        }else{
-            // student sign up
-            if(location.hash.includes('ggl')){
-                // gtag('event', 'conversion', {'send_to': 'AW-10879325643/4zLuCN3Jv7kDEMur1cMo'});
-            }
-            $("#student-signup-ty-body").attr("hidden", false);
-        }
-        location.hash = '';
-    }
+  
 
 
     // Smooth scrolling using jQuery easing
@@ -99,7 +86,7 @@
         (function(){
         var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
         s1.async=true;
-        s1.src='https://embed.tawk.to/608a18325eb20e09cf379c19/1f4dmt13h';
+        s1.src='https://embed.tawk.to/62c1e5b47b967b117997cb8c/1g72miiia';
         s1.charset='UTF-8';
         s1.setAttribute('crossorigin','*');
         s0.parentNode.insertBefore(s1,s0);
