@@ -8519,18 +8519,9 @@ body {
   #index-header-text {
     transform: scale(0.7); } }
 
-/*! uncss:ignore start */
-#teachworks-directory-profiles .tw-details {
-  float: none !important;
-  color: #aeaeae !important;
-  display: inline; }
+.communication-channels svg {
+  width: 2rem; }
 
-#teachworks-directory-profiles .tw-photo {
-  float: initial !important;
-  position: initial !important;
-  display: initial !important; }
-
-/*! uncss:ignore end */
 #vid-container {
   position: absolute;
   width: 100%;
