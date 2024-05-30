@@ -1,5 +1,5 @@
 {
-  "name": "musicmi",
+  "name": "SBILAW",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -30,7 +30,7 @@
     "concurrently": "^6.3.0",
     "html-minifier-terser": "^6.0.2",
     "node-sass": "^6.0.1",
-    "pug": "^3.0.2",
+    "pug": "^3.0.3",
     "pug-cli": "^1.0.0-alpha6"
   },
   "dependencies": {
